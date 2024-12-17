@@ -6,8 +6,8 @@ ChromeなどのブラウザとNode.jsで動作するものを用意する予定�
 ### 動かし方
 Chrome上でチャット風画面（実際にメッセージを送ることはできません、画面だけです）をJavaScriptで実現しました。次の手順で試せます。
 
-1. [まず、ここをクリックしてmain.zipをダウンロードします](https://github.com/kwaka1208/lets_start_javascript/archive/refs/heads/main.zip)
-2. ダウンロードされたmain.zipを展開します。Windowsの場合は必ず「すべてを展開」で行ってください。
+1. [まず、ここをクリックして"lets_start_javascript-main.zip"をダウンロードします](https://github.com/kwaka1208/lets_start_javascript/archive/refs/heads/main.zip)
+2. ダウンロードされた"lets_start_javascript-main.zip"を展開します。Windowsの場合はファイルの上で右クリックして必「すべてを展開」で展開してください。
 3. 展開してできたフォルダの中にbrowserフォルダがあります。この中のindex.htmlをダブルクリックしてください。
 4. チャットのような画面が表示されますので、何かメッセージを入力して「送信」ボタンを押してください。繰り返しますが、実際に送信は行われません。
 
