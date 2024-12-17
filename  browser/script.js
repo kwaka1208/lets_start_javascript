@@ -1,27 +1,26 @@
-function sendMessage() {
+document.addEventListener("DOMContentLoaded", function () {
   const userInput = document.getElementById('user-input');
-  const message = userInput.value.trim();
+  const chatBox = document.getElementById('chat-box');
 
-  if (message) {
-    // チャットボックスにメッセージを追加
-    const chatBox = document.getElementById('chat-box');
-    const userMessage = document.createElement('div');
-    userMessage.className = 'message user-message';
-    userMessage.textContent = message;
-    chatBox.appendChild(userMessage);
+  document.querySelector('button').addEventListener('click', sendMessage);
 
-    // チャットボックスを下までスクロール
-    chatBox.scrollTop = chatBox.scrollHeight;
+  userInput.addEventListener("keyup", function (e) {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      sendMessage();
+    }
+  });
 
-    // 入力欄をクリア
-    userInput.value = '';
-  }
-}
+  function sendMessage() {
+    const message = userInput.value.trim();
+    if (message) {
+      const userMessage = document.createElement('div');
+      userMessage.className = 'message user-message';
+      userMessage.textContent = message;
+      chatBox.appendChild(userMessage);
 
-// Enterキーで送信可能にする (keyupイベントを使用)
-document.getElementById('user-input').addEventListener('keyup', function (e) {
-  if (e.key === 'Enter') {
-    e.preventDefault(); // デフォルト動作（フォーム送信）を防ぐ
-    sendMessage();
+      chatBox.scrollTop = chatBox.scrollHeight; // スクロールを下に移動
+      userInput.value = ''; // 入力欄をクリア
+    }
   }
 });
